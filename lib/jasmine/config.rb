@@ -74,6 +74,7 @@ module Jasmine
         config.jasmine_files = lambda { yaml_config.jasmine_files } if yaml_config.jasmine_files.any?
         config.jasmine_css_files = lambda { yaml_config.jasmine_css_files } if yaml_config.jasmine_css_files.any?
         config.src_files = lambda { yaml_config.src_files }
+        config.lib_files = lambda { yaml_config.lib_files }
         config.spec_files = lambda { yaml_config.helpers + yaml_config.spec_files }
         config.css_files = lambda { yaml_config.css_files }
         config.src_dir = yaml_config.src_dir

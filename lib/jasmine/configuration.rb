@@ -1,7 +1,7 @@
 module Jasmine
   class Configuration
     attr_writer :jasmine_css_files, :css_files
-    attr_writer :jasmine_files, :boot_files, :src_files, :spec_files
+    attr_writer :jasmine_files, :boot_files, :src_files, :spec_files, :lib_files
     attr_accessor :jasmine_path, :spec_path, :boot_path, :src_path
     attr_accessor :jasmine_dir, :spec_dir, :boot_dir, :src_dir
     #TODO: these are largely client concerns, move them.
@@ -26,6 +26,7 @@ module Jasmine
 
     def js_files
       map(@jasmine_files, :jasmine) +
+        map(@lib_files, :src) +
         map(@src_files, :src) +
         map(@spec_files, :spec) +
         map(@boot_files, :boot)

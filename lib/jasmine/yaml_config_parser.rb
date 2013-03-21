@@ -26,6 +26,10 @@ module Jasmine
       @path_expander.call(src_dir, loaded_yaml['src_files'] || [])
     end
 
+    def lib_files
+      @path_expander.call(src_dir, loaded_yaml['lib_files'] || [])
+    end
+
     def jasmine_files
       @path_expander.call(jasmine_dir, loaded_yaml['jasmine_files'] || [])
     end
