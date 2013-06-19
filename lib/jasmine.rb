@@ -10,7 +10,7 @@ jasmine_files = ['base',
                  'command_line_tool',
                  'page',
                  'path_mapper',
-                 'asset_pipeline_utility',
+                 'asset_bundle',
                  'asset_pipeline_mapper',
                  'asset_expander',
                  'results_processor',
@@ -22,10 +22,7 @@ jasmine_files = ['base',
 jasmine_files.each do |file|
   require File.join('jasmine', file)
 end
-# jasmine_rack_files.each do |file|
-  # require File.join('rack', 'jasmine', file)
-# end
 
-require File.join('jasmine', "railtie") if Jasmine::Dependencies.rails3?
+require File.join('jasmine', "railtie") if Jasmine::Dependencies.use_railties?
 
 
