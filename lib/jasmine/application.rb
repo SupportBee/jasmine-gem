@@ -4,6 +4,7 @@ require 'jasmine-core'
 require 'rack/jasmine/runner'
 require 'rack/jasmine/focused_suite'
 require 'rack/jasmine/cache_control'
+require 'jammit'
 require 'ostruct'
 
 module Jasmine
